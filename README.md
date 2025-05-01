@@ -122,7 +122,6 @@ fullstack-todo-app/
 - The frontend uses Next.js App Router for modern React server components
 - Backend follows NestJS modular architecture
 - Database schema is managed through Prisma migrations
-- API documentation is available at `/api-docs` when running the backend
 - Frontend components use Shadcn UI for consistent design
 - State management is handled through Zustand for simplicity and performance
 
