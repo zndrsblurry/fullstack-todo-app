@@ -133,3 +133,7 @@ This project is meant to demonstrate development capabilities but contributions 
 3. Commit your changes
 4. Push to the branch
 5. Open a Pull Request
+
+## License
+
+MIT License - feel free to use this project as a reference or starting point for your own work.
