@@ -74,7 +74,7 @@ This directory contains the frontend application for the Fullstack Todo app, bui
 - `pnpm format` - Format code with Prettier
 
 ## Project Structure
-
+```
 frontend/
 ├── src/
 │ ├── app/ # Next.js app directory
@@ -84,7 +84,7 @@ frontend/
 │ └── types/ # TypeScript type definitions
 ├── public/ # Static files
 └── tailwind.config.js
-
+```
 ## Technologies Used
 
 - [Next.js](https://nextjs.org/)
