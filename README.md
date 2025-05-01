@@ -39,7 +39,7 @@ This project is structured as a monorepo containing both frontend and backend ap
 - Docker (for development database)
 
 ## Project Structure
-
+```
 fullstack-todo-app/
 ├── frontend/ # Next.js frontend application
 │ ├── src/
@@ -56,7 +56,7 @@ fullstack-todo-app/
 │ │ ├── prisma/ # Prisma configuration
 │ │ └── main.ts # Application entry point
 │ └── prisma/ # Database schema and migrations
-
+```
 ## Features
 
 - ✨ Modern, responsive UI
