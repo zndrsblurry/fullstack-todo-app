@@ -13,92 +13,95 @@ This directory contains the backend server for the Fullstack Todo application, b
 ## Prerequisites
 
 - Node.js (v18 or later recommended)
-- npm (or pnpm/yarn)
+- pnpm (v8 or later recommended)
 - PostgreSQL database server (running locally, via Docker, or cloud service)
 - Docker (Optional, if using the provided `docker-compose.yml`)
 
 ## Setup and Installation
 
-1.  **Clone the Repository:**
+1. **Install pnpm** (if not already installed):
 
-    ```bash
-    git clone https://github.com/<your-github-username>/<your-repo-name>.git
-    cd fullstack-todo-app/backend
-    ```
+   ```bash
+   # Using npm
+   npm install -g pnpm
 
-2.  **Install Dependencies:**
+   # Using Homebrew (macOS)
+   brew install pnpm
 
-    ```bash
-    npm install
-    # or: pnpm install / yarn install
-    ```
+   # Using Scoop (Windows)
+   scoop install pnpm
 
-3.  **Set Up Environment Variables:**
+   # Using Curl
+   curl -fsSL https://get.pnpm.io/install.sh | sh -
+   ```
 
-    - Copy the example environment file:
-      ```bash
-      cp .env.example .env
-      ```
-      _(Note: We need to create `.env.example` first. Let's do that next.)_
-    - Edit the `.env` file with your PostgreSQL database connection string:
+2. **Clone the Repository:**
 
-      ```dotenv
-      # backend/.env
-      DATABASE_URL="postgresql://<db_user>:<db_password>@<db_host>:<db_port>/<db_name>?schema=public"
-      # Example using docker-compose defaults:
-      # DATABASE_URL="postgresql://user:password@localhost:5432/tododb?schema=public"
+   ```bash
+   git clone https://github.com/zndrsblurry/fullstack-todo-app.git
+   cd fullstack-todo-app/backend
+   ```
 
-      # Optional: Specify the port the backend server runs on
-      # PORT=3001
-      ```
+3. **Install Dependencies:**
 
-4.  **Database Setup (if not already running):**
+   ```bash
+   pnpm install
+   ```
 
-    - **Using Docker (Recommended):**
-      From the `backend` directory, run:
-      ```bash
-      docker-compose up -d
-      ```
-    - **Manual Setup:** Ensure your PostgreSQL server is running and accessible with the credentials provided in `.env`.
+4. **Set Up Environment Variables:**
 
-5.  **Apply Database Migrations:**
-    Run Prisma migrations to set up the database schema:
-    ```bash
-    npx prisma migrate dev
-    ```
+   - Copy the example environment file:
+     ```bash
+     cp .env.example .env
+     ```
+     _(Note: We need to create `.env.example` first. Let's do that next.)_
+   - Edit the `.env` file with your PostgreSQL database connection string:
+
+     ```dotenv
+     # backend/.env
+     DATABASE_URL="postgresql://<db_user>:<db_password>@<db_host>:<db_port>/<db_name>?schema=public"
+     # Example using docker-compose defaults:
+     # DATABASE_URL="postgresql://user:password@localhost:5432/tododb?schema=public"
+
+     # Optional: Specify the port the backend server runs on
+     # PORT=3001
+     ```
+
+5. **Database Setup (if not already running):**
+
+   - **Using Docker (Recommended):**
+     From the `backend` directory, run:
+     ```bash
+     docker-compose up -d
+     ```
+   - **Manual Setup:** Ensure your PostgreSQL server is running and accessible with the credentials provided in `.env`.
+
+6. **Apply Database Migrations:**
+   Run Prisma migrations to set up the database schema:
+   ```bash
+   pnpm dlx prisma migrate dev
+   ```
 
 ## Running the Application
 
 - **Development Mode (with hot-reloading):**
 
   ```bash
-  npm run start:dev
+  pnpm run start:dev
   ```
 
   The server will start, typically on `http://localhost:3001` (or the port specified in `.env`).
 
 - **Production Mode:**
   ```bash
-  npm run build
-  npm run start:prod
+  pnpm run build
+  pnpm run start:prod
   ```
-
-## API Endpoints
-
-The following endpoints are available (base path: `/todos`):
-
-- `GET /todos`: Get all todos.
-- `POST /todos`: Create a new todo.
-  - Body: `{ "title": "string", "description"?: "string" }`
-- `GET /todos/:id`: Get a single todo by ID.
-- `PATCH /todos/:id`: Update a todo by ID.
-  - Body: `{ "title"?: "string", "description"?: "string", "completed"?: boolean }`
-- `DELETE /todos/:id`: Delete a todo by ID.
 
 ## Linting and Formatting
 
-- Format code: `npm run format`
-- Lint code: `npm run lint`
+- Format code: `pnpm run format`
+- Lint code: `pnpm run lint`
 
 ## Technologies Used
 
