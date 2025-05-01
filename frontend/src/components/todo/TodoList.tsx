@@ -20,7 +20,7 @@ export function TodoList({
   onDelete,
   onEdit,
 }: TodoListProps) {
-  if (loading && todos.length === 0) {
+  if (loading) {
     return <TodoLoading />;
   }
 
