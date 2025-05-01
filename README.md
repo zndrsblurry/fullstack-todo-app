@@ -43,21 +43,21 @@ This project is structured as a monorepo containing both frontend and backend ap
 ## Project Structure
 ```
 fullstack-todo-app/
-├── frontend/ # Next.js frontend application
+├── frontend/         # Next.js frontend application
 │ ├── src/
-│ │ ├── app/ # Next.js app directory
-│ │ ├── components/# React components
-│ │ ├── lib/ # Utility functions
-│ │ ├── store/ # Zustand store
-│ │ └── types/ # TypeScript types
-│ └── public/ # Static assets
+│ │ ├── app/          # Next.js app directory
+│ │ ├── components/   # React components
+│ │ ├── lib/          # Utility functions
+│ │ ├── store/        # Zustand store
+│ │ └── types/        # TypeScript types
+│ └── public/         # Static assets
 │
-├── backend/ # NestJS backend application
+├── backend/          # NestJS backend application
 │ ├── src/
-│ │ ├── todos/ # Todo module
-│ │ ├── prisma/ # Prisma configuration
-│ │ └── main.ts # Application entry point
-│ └── prisma/ # Database schema and migrations
+│ │ ├── todos/        # Todo module
+│ │ ├── prisma/       # Prisma configuration
+│ │ └── main.ts       # Application entry point
+│ └── prisma/         # Database schema and migrations
 ```
 ## Features
 
