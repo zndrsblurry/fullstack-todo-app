@@ -1,0 +1,17 @@
+# backend/docker-compose.yml
+version: '3.8'
+services:
+  db:
+    image: postgres:15 # Use a specific version
+    restart: always
+    environment:
+      POSTGRES_USER: user # Choose a username
+      POSTGRES_PASSWORD: password # Choose a strong password
+      POSTGRES_DB: tododb # Choose a database name
+    ports:
+      - '5432:5432' # Map local port 5432 to container port 5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persist data
+
+volumes:
+  postgres_data:
