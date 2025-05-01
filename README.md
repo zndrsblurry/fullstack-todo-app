@@ -2,6 +2,8 @@
 
 A modern, full-stack todo application built to demonstrate full-stack development capabilities and adherence to industry best practices. This project showcases the implementation of a complete web application using modern technologies and architectural patterns.
 
+![image](https://github.com/user-attachments/assets/564387ae-05d5-4f85-9c50-c06b2dd7399f)
+
 ## Project Overview
 
 This project is structured as a monorepo containing both frontend and backend applications, demonstrating:
